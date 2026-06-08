@@ -343,6 +343,7 @@
     .gallery-track {
       display: flex;
       transition: transform 0.65s cubic-bezier(0.77, 0, 0.175, 1);
+      touch-action: pan-y;
     }
 
     .gallery-slide {
@@ -1334,29 +1335,21 @@
     btnNext.addEventListener('click', () => { slideIndex = (slideIndex + 1) % TOTAL; updateSlider(); });
     btnPrev.addEventListener('click', () => { slideIndex = (slideIndex - 1 + TOTAL) % TOTAL; updateSlider(); });
 
-    // Touch/swipe
+    // Touch/swipe — iOS safe (touch-action: pan-y handles scroll, no preventDefault needed)
     let touchStartX = 0;
     let touchStartY = 0;
-    let isSwiping = false;
     track.addEventListener('touchstart', e => {
       touchStartX = e.touches[0].clientX;
       touchStartY = e.touches[0].clientY;
-      isSwiping = false;
     }, { passive: true });
-    track.addEventListener('touchmove', e => {
-      const dx = Math.abs(e.touches[0].clientX - touchStartX);
-      const dy = Math.abs(e.touches[0].clientY - touchStartY);
-      if (dx > dy && dx > 8) {
-        isSwiping = true;
-        e.preventDefault();
-      }
-    }, { passive: false });
     track.addEventListener('touchend', e => {
-      if (!isSwiping) return;
       const dx = touchStartX - e.changedTouches[0].clientX;
-      if (dx > 40) { slideIndex = (slideIndex + 1) % TOTAL; updateSlider(); }
-      if (dx < -40) { slideIndex = (slideIndex - 1 + TOTAL) % TOTAL; updateSlider(); }
-    });
+      const dy = Math.abs(e.changedTouches[0].clientY - touchStartY);
+      if (Math.abs(dx) > 40 && Math.abs(dx) > dy) {
+        if (dx > 0) { slideIndex = (slideIndex + 1) % TOTAL; updateSlider(); }
+        else { slideIndex = (slideIndex - 1 + TOTAL) % TOTAL; updateSlider(); }
+      }
+    }, { passive: true });
 
     window.addEventListener('resize', updateSlider);
     updateSlider();
