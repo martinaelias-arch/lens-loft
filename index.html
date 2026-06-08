@@ -12,6 +12,7 @@
   <meta name="robots" content="index, follow" />
   <meta name="google-site-verification" content="BDbMk3toVBH_uzdE4-QLeMoKYPMcoZRTnZS0OcRoeYo" />
   <link rel="canonical" href="https://www.lightandloft.cz/" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -115,7 +116,7 @@
       color: var(--text);
       font-family: 'Didact Gothic', sans-serif;
       font-weight: 400;
-      font-size: 18px;
+      font-size: 20px;
       line-height: 1.75;
     }
 
@@ -185,7 +186,7 @@
     .sidebar-nav a.active { color: var(--accent); }
 
     .sidebar-contact {
-      font-size: 11px;
+      font-size: 13px;
       color: var(--muted);
       line-height: 1.9;
     }
@@ -258,7 +259,7 @@
 
     .hero-sub {
       font-family: 'Didact Gothic', sans-serif;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 400;
       color: rgba(232,228,222,0.7);
       max-width: 460px;
@@ -321,7 +322,7 @@
 
     .pro-koho-text p {
       color: rgba(232,228,222,0.6);
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1.9;
     }
 
@@ -455,7 +456,7 @@
 
     .manifesto-inner p {
       font-family: 'Oswald', sans-serif;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 400;
       line-height: 1.6;
       letter-spacing: 10px;
@@ -504,7 +505,7 @@
     }
 
     .proc-item p {
-      font-size: 14px;
+      font-size: 16px;
       color: rgba(232,228,222,0.48);
       line-height: 1.85;
     }
@@ -537,7 +538,7 @@
     }
 
     .jak-step p {
-      font-size: 14px;
+      font-size: 16px;
       color: rgba(232,228,222,0.48);
       line-height: 1.85;
     }
@@ -565,7 +566,7 @@
     .o-mne-text h2 { margin-bottom: 36px; }
 
     .o-mne-text p {
-      font-size: 15px;
+      font-size: 17px;
       color: rgba(232,228,222,0.58);
       line-height: 1.95;
       margin-bottom: 20px;
@@ -615,13 +616,13 @@
     }
 
     .cena-price small {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 300;
       color: var(--muted);
     }
 
     .cena-desc {
-      font-size: 13px;
+      font-size: 15px;
       color: rgba(232,228,222,0.38);
       margin-top: 24px;
       line-height: 1.8;
@@ -629,7 +630,7 @@
 
     .ceny-note {
       margin-top: 48px;
-      font-size: 12px;
+      font-size: 14px;
       color: var(--muted);
     }
 
@@ -683,7 +684,7 @@
 
     .kontakt-intro {
       color: rgba(232,228,222,0.5);
-      font-size: 15px;
+      font-size: 17px;
       margin-bottom: 56px;
       line-height: 1.8;
     }
@@ -702,13 +703,13 @@
     .kontakt-detail a {
       color: var(--text);
       text-decoration: none;
-      font-size: 15px;
+      font-size: 17px;
       transition: color 0.2s;
       display: block;
     }
     .kontakt-detail a:hover { color: var(--accent); }
 
-    .k-lokality { font-size: 14px; color: rgba(232,228,222,0.48); }
+    .k-lokality { font-size: 16px; color: rgba(232,228,222,0.48); }
 
     /* Form */
     form { display: flex; flex-direction: column; }
@@ -734,7 +735,7 @@
       border-bottom: 1px solid var(--border);
       color: var(--text);
       font-family: 'Inter', sans-serif;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 300;
       padding: 10px 0;
       outline: none;
@@ -767,7 +768,7 @@
     .footer-logo span { color: var(--accent); }
 
     .footer-meta {
-      font-size: 11px;
+      font-size: 13px;
       color: var(--muted);
       line-height: 2;
       font-style: normal;
@@ -777,7 +778,7 @@
 
     .footer-right {
       text-align: right;
-      font-size: 11px;
+      font-size: 13px;
       color: var(--muted);
       line-height: 2;
     }
@@ -899,9 +900,9 @@
       .hero { align-items: flex-start; padding: 120px 24px 60px; height: auto; min-height: 0; }
       .hero-bg::after { background: linear-gradient(to bottom, rgba(20,20,20,0.92) 0%, rgba(20,20,20,0.6) 50%, rgba(20,20,20,0.1) 100%); }
       .hero-headline { font-size: 28px; letter-spacing: 6px; }
-      .hero-sub { font-size: 15px; }
+      .hero-sub { font-size: 17px; }
       .manifesto { padding: 80px 24px; }
-      .manifesto-inner p { font-size: 14px; letter-spacing: 4px; word-spacing: 2px; }
+      .manifesto-inner p { font-size: 16px; letter-spacing: 4px; word-spacing: 2px; }
       .section-title { font-size: 26px; letter-spacing: 5px; word-spacing: 3px; }
       footer { padding: 48px 32px; }
 
@@ -1333,11 +1334,26 @@
 
     // Touch/swipe
     let touchStartX = 0;
-    track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    let touchStartY = 0;
+    let isSwiping = false;
+    track.addEventListener('touchstart', e => {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+      isSwiping = false;
+    }, { passive: true });
+    track.addEventListener('touchmove', e => {
+      const dx = Math.abs(e.touches[0].clientX - touchStartX);
+      const dy = Math.abs(e.touches[0].clientY - touchStartY);
+      if (dx > dy && dx > 8) {
+        isSwiping = true;
+        e.preventDefault();
+      }
+    }, { passive: false });
     track.addEventListener('touchend', e => {
+      if (!isSwiping) return;
       const dx = touchStartX - e.changedTouches[0].clientX;
-      if (dx > 50) { slideIndex = (slideIndex + 1) % TOTAL; updateSlider(); }
-      if (dx < -50) { slideIndex = (slideIndex - 1 + TOTAL) % TOTAL; updateSlider(); }
+      if (dx > 40) { slideIndex = (slideIndex + 1) % TOTAL; updateSlider(); }
+      if (dx < -40) { slideIndex = (slideIndex - 1 + TOTAL) % TOTAL; updateSlider(); }
     });
 
     window.addEventListener('resize', updateSlider);
