@@ -1013,6 +1013,78 @@
     #lb-prev  { left: 20px; top: 50%; transform: translateY(-50%); }
     #lb-next  { right: 20px; top: 50%; transform: translateY(-50%); }
 
+    /* ── FAQ ACCORDION ── */
+    .faq-section {
+      padding: 100px 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq-section .section-title {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .faq-list {
+      border-top: 1px solid rgba(201,169,110,0.2);
+    }
+    .faq-item {
+      border-bottom: 1px solid rgba(201,169,110,0.2);
+    }
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      cursor: pointer;
+      text-align: left;
+      color: var(--text);
+      font-family: 'Oswald', sans-serif;
+      font-size: 17px;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+    }
+    .faq-q:hover,
+    .faq-q[aria-expanded="true"] {
+      color: var(--accent);
+    }
+    .faq-icon {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      color: var(--accent);
+      transition: transform 0.35s ease;
+    }
+    .faq-q[aria-expanded="true"] .faq-icon {
+      transform: rotate(45deg);
+    }
+    .faq-a {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.38s ease;
+    }
+    .faq-a > p {
+      overflow: hidden;
+      font-size: 15px;
+      line-height: 1.75;
+      color: rgba(232,228,222,0.7);
+      padding-bottom: 0;
+      transition: padding-bottom 0.38s ease;
+    }
+    .faq-item.open .faq-a {
+      grid-template-rows: 1fr;
+    }
+    .faq-item.open .faq-a > p {
+      padding-bottom: 24px;
+    }
+    @media (max-width: 600px) {
+      .faq-section { padding: 72px 24px; }
+      .faq-q { font-size: 15px; }
+    }
+
     /* ── SCROLL REVEAL ── */
     .reveal {
       opacity: 0;
@@ -1252,44 +1324,61 @@
       </div>
 
       <p class="ceny-note">Price includes the shoot, editing and travel within Jihlava, Prague, Brno and Vysočina.</p>
-      <p class="ceny-note" style="margin-top: 16px; color: rgba(201,169,110,0.6);">Working together regularly? Designers, studios and manufacturers who collaborate with me on an ongoing basis receive preferential pricing — just get in touch.</p>
       <br>
       <a href="#kontakt" class="btn" style="margin-top: 20px;">Get in touch</a>
     </section>
 
     <!-- FAQ -->
-    <section class="jak" id="faq" aria-labelledby="faq-h2" style="background: var(--bg);">
+    <section class="faq-section" id="faq" aria-labelledby="faq-h2">
       <h2 id="faq-h2" class="section-title reveal"><span class="a">Frequently</span> <span class="w">asked</span></h2>
-      <div class="jak-steps" style="gap: 48px;">
+      <div class="faq-list reveal">
 
-        <div class="jak-step reveal">
-          <h3>How much does interior photography cost?</h3>
-          <p>Prices start at CZK 9,900 for a single room. A full apartment or house from CZK 14,900. Commercial spaces and hotels are quoted individually — just drop me a message.</p>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>How much does interior photography cost?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-a"><p>Prices start at CZK 9,900 for a single room. A full apartment or house from CZK 14,900. Commercial spaces and hotels are quoted individually — just drop me a message.</p></div>
         </div>
 
-        <div class="jak-step reveal">
-          <h3>How quickly will I receive my photos?</h3>
-          <p>Edited images delivered within 14 days of the shoot — ready for web, social media and print in high resolution.</p>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>How quickly will I receive my photos?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-a"><p>Edited images delivered within 14 days of the shoot — ready for web, social media and print in high resolution.</p></div>
         </div>
 
-        <div class="jak-step reveal">
-          <h3>Where do you work?</h3>
-          <p>Primarily Jihlava, Prague, Brno and the Vysočina region. Travel is included in the price. Further locations always negotiable.</p>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Where do you work?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-a"><p>Primarily Jihlava, Prague, Brno and the Vysočina region. Travel is included in the price. Further locations always negotiable.</p></div>
         </div>
 
-        <div class="jak-step reveal">
-          <h3>How should I prepare the space?</h3>
-          <p>Clean and clutter-free — bins hidden, cables tucked away, a few decorative touches added. I'll send specific tips once we confirm the date.</p>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>How should I prepare the space?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-a"><p>Clean and clutter-free — bins hidden, cables tucked away, a few decorative touches added. I'll send specific tips once we confirm the date.</p></div>
         </div>
 
-        <div class="jak-step reveal">
-          <h3>Do you offer discounts for repeat clients?</h3>
-          <p>Yes. Designers, studios and manufacturers who work with me regularly receive an individual rate with preferential pricing. Just reach out.</p>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Do you offer discounts for repeat clients?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-a"><p>Yes. Designers, studios and manufacturers who work with me regularly receive an individual rate with preferential pricing. Just reach out.</p></div>
         </div>
 
-        <div class="jak-step reveal">
-          <h3>What file format will I receive?</h3>
-          <p>High-resolution JPG files. Web-optimised versions or specific dimensions for social media available on request.</p>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>What file format will I receive?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-a"><p>High-resolution JPG files. Web-optimised versions or specific dimensions for social media available on request.</p></div>
         </div>
 
       </div>
@@ -1420,6 +1509,22 @@
       backTop.classList.toggle('show', window.scrollY > 500);
     }, { passive: true });
     backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(el => {
+          el.classList.remove('open');
+          el.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
 
     // Hero parallax — desktop only (iOS Safari jankuje)
     const heroBg = document.querySelector('.hero-bg');
