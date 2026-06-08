@@ -94,8 +94,14 @@
   }
   </script>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&family=Inter:wght@300;400;500&family=Didact+Gothic&display=swap" rel="stylesheet" />
+  <!-- Fonts — async, non-render-blocking -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=Inter:wght@300;400;500&family=Didact+Gothic&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=Inter:wght@300;400;500&family=Didact+Gothic&display=swap"></noscript>
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="_DSF0787.webp" fetchpriority="high">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -902,7 +908,7 @@
       section { padding: 52px 24px; }
       .hero { align-items: flex-start; padding: 120px 24px 60px; height: auto; min-height: 0; }
       .hero-bg::after { background: linear-gradient(to bottom, rgba(20,20,20,0.92) 0%, rgba(20,20,20,0.6) 50%, rgba(20,20,20,0.1) 100%); }
-      .hero-headline { font-size: 28px; letter-spacing: 6px; }
+      .hero-headline { font-size: 36px; letter-spacing: 6px; }
       .hero-sub { font-size: 17px; }
       .manifesto { padding: 80px 24px; }
       .manifesto-inner p { font-size: 16px; letter-spacing: 4px; word-spacing: 2px; }
@@ -932,7 +938,7 @@
     }
 
     @media (max-width: 480px) {
-      .hero-headline { font-size: 44px; }
+      .hero-headline { font-size: 34px; }
       .pg-item { flex: 0 0 calc(100% - 3px); height: 300px; }
     }
 
