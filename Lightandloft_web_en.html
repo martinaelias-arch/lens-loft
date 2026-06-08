@@ -1288,22 +1288,23 @@
   </div>
 
   <script>
-    // Hero parallax + 3D scroll effect
+    // Hero parallax — desktop only (iOS Safari jankuje)
     const heroBg = document.querySelector('.hero-bg');
-    let rafPending = false;
-    function updateParallax() {
-      const scrollY = window.scrollY;
-      const heroH  = document.querySelector('.hero').offsetHeight;
-      if (scrollY > heroH) { rafPending = false; return; }
-      const translateY = scrollY * 0.38;
-      const rotateX    = Math.min(scrollY * 0.018, 6);
-      const scale      = 1 + scrollY * 0.0003;
-      heroBg.style.transform = `translateY(${translateY}px) perspective(900px) rotateX(${rotateX}deg) scale(${scale})`;
-      rafPending = false;
+    const isIOS = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    if (!isIOS && window.innerWidth > 960) {
+      let rafPending = false;
+      const heroEl = document.querySelector('.hero');
+      function updateParallax() {
+        const scrollY = window.scrollY;
+        if (scrollY < heroEl.offsetHeight) {
+          heroBg.style.transform = `translateY(${scrollY * 0.38}px) translateZ(0)`;
+        }
+        rafPending = false;
+      }
+      window.addEventListener('scroll', () => {
+        if (!rafPending) { rafPending = true; requestAnimationFrame(updateParallax); }
+      }, { passive: true });
     }
-    window.addEventListener('scroll', () => {
-      if (!rafPending) { rafPending = true; requestAnimationFrame(updateParallax); }
-    }, { passive: true });
 
     // Mobile sidebar toggle
     const sidebar = document.getElementById('sidebar');
