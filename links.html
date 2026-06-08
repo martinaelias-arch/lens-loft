@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Martina Benáčková — Fotografka interiérů</title>
+  <meta name="description" content="Fotografka interiérů Martina Benáčková — Jihlava, Praha, Brno, Vysočina. Light & Loft." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- OG -->
+  <meta property="og:title" content="Martina Benáčková — Fotografka interiérů" />
+  <meta property="og:image" content="https://www.lightandloft.cz/_DSF0787.jpg" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:     #191919;
+      --bg2:    #1f1f1f;
+      --text:   #e8e4de;
+      --muted:  #6a6a6a;
+      --accent: #c9a96e;
+      --border: #2a2a2a;
+    }
+
+    html, body {
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 24px 80px;
+    }
+
+    /* ── HERO PHOTO ── */
+    .photo-wrap {
+      position: relative;
+      width: 96px;
+      height: 96px;
+      margin-bottom: 28px;
+    }
+    .photo-wrap img {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      border: 1px solid var(--border);
+    }
+    .photo-ring {
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 1px solid rgba(201,169,110,0.35);
+    }
+
+    /* ── NAME & TITLE ── */
+    .name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text);
+      text-align: center;
+      margin-bottom: 6px;
+    }
+    .name .gold { color: var(--accent); }
+
+    .title {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .location {
+      font-size: 11px;
+      color: rgba(201,169,110,0.5);
+      letter-spacing: 0.14em;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      width: 32px;
+      height: 1px;
+      background: var(--accent);
+      margin: 0 auto 48px;
+      opacity: 0.5;
+    }
+
+    /* ── LINKS ── */
+    .links {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .link-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 24px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.2s, background 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .link-item::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 2px;
+      background: var(--accent);
+      transform: scaleY(0);
+      transition: transform 0.2s;
+      transform-origin: bottom;
+    }
+    .link-item:hover {
+      border-color: rgba(201,169,110,0.3);
+      background: #222;
+    }
+    .link-item:hover::before {
+      transform: scaleY(1);
+    }
+
+    .link-icon {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+    }
+    .link-icon svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--accent);
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .link-text {
+      flex: 1;
+    }
+    .link-label {
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+    .link-value {
+      font-family: 'Oswald', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      color: var(--text);
+    }
+
+    .link-arrow {
+      color: var(--muted);
+      font-size: 18px;
+      transition: color 0.2s, transform 0.2s;
+    }
+    .link-item:hover .link-arrow {
+      color: var(--accent);
+      transform: translateX(3px);
+    }
+
+    /* Featured link */
+    .link-item.featured {
+      background: rgba(201,169,110,0.06);
+      border-color: rgba(201,169,110,0.25);
+    }
+    .link-item.featured .link-value { color: var(--accent); }
+    .link-item.featured::before { transform: scaleY(1); }
+
+    /* ── SECTION LABEL ── */
+    .section-label {
+      font-size: 9px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+      margin: 32px 0 12px;
+      opacity: 0.6;
+    }
+
+    /* ── FOOTER ── */
+    .foot {
+      margin-top: 56px;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      color: rgba(106,106,106,0.5);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Profile -->
+  <div class="photo-wrap">
+    <img src="IMG_30022.webp" alt="Mgr. Martina Benáčková" />
+    <div class="photo-ring"></div>
+  </div>
+
+  <p class="name"><span class="gold">Martina</span> Benáčková</p>
+  <p class="title">Fotografka interiérů</p>
+  <p class="location">Jihlava · Praha · Brno · Vysočina</p>
+
+  <div class="divider"></div>
+
+  <!-- Links -->
+  <div class="links">
+
+    <!-- Web -->
+    <a href="https://www.lightandloft.cz" class="link-item featured" target="_blank" rel="noopener">
+      <div class="link-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+      </div>
+      <div class="link-text">
+        <p class="link-label">Portfolio & web</p>
+        <p class="link-value">lightandloft.cz</p>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <p class="section-label">Kontakt</p>
+
+    <!-- Email -->
+    <a href="mailto:info@martinabenackova.cz" class="link-item">
+      <div class="link-icon">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </div>
+      <div class="link-text">
+        <p class="link-label">Napište mi</p>
+        <p class="link-value">info@martinabenackova.cz</p>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <!-- Telefon -->
+    <a href="tel:+420723916285" class="link-item">
+      <div class="link-icon">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </div>
+      <div class="link-text">
+        <p class="link-label">Zavolejte</p>
+        <p class="link-value">+420 723 916 285</p>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <p class="section-label">Ceník</p>
+
+    <!-- Ceník -->
+    <a href="https://www.lightandloft.cz/#ceny" class="link-item" target="_blank" rel="noopener">
+      <div class="link-icon">
+        <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      </div>
+      <div class="link-text">
+        <p class="link-label">Orientační ceny</p>
+        <p class="link-value">Od 9 900 Kč</p>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+  </div>
+
+  <p class="foot">© 2026 Light &amp; Loft — Mgr. Martina Benáčková</p>
+
+</body>
+</html>
