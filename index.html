@@ -10,7 +10,7 @@
   <meta name="keywords" content="fotografka interiérů Jihlava, fotografka interiérů Vysočina, fotografie interiérů Praha, fotografka nábytku na míru, interiérová fotografka Brno, fotografie designérských interiérů, profesionální fotografie kuchyní" />
   <meta name="author" content="Mgr. Martina Benáčková" />
   <meta name="robots" content="index, follow" />
-  <meta name="google-site-verification" content="EWX_xAsM9ncaEdW_eWwPmPZ0HYjb1twLcXvEXPrBpgA" />
+  <meta name="google-site-verification" content="BDbMk3toVBH_uzdE4-QLeMoKYPMcoZRTnZS0OcRoeYo" />
   <link rel="canonical" href="https://www.lightandloft.cz/" />
 
   <!-- Open Graph -->
@@ -1225,7 +1225,9 @@
         </div>
       </div>
 
-      <form action="mailto:info@martinabenackova.cz" method="post" enctype="text/plain" aria-label="Kontaktní formulář">
+      <form id="contact-form" action="https://formspree.io/f/mykawwyk" method="POST" aria-label="Kontaktní formulář">
+        <input type="hidden" name="_next" value="https://www.lightandloft.cz/?odeslano=1" />
+        <input type="hidden" name="_subject" value="Nová zpráva z lightandloft.cz" />
         <div class="form-field">
           <label for="jmeno">Jméno a příjmení</label>
           <input type="text" id="jmeno" name="jmeno" placeholder="Jana Nováková" required autocomplete="name" />
@@ -1381,6 +1383,7 @@
       if (e.key === 'ArrowRight') nextLB();
     });
   </script>
+
 
 </body>
 </html>
