@@ -1323,11 +1323,30 @@
     const TOTAL       = slides.length;
     let slideIndex    = 0;
 
+    // Lazy loading — extract all bg URLs, clear them, load on demand
+    const bgImages = slides.map(slide => {
+      const pgImg = slide.querySelector('.pg-img');
+      const bg = pgImg ? pgImg.style.backgroundImage : '';
+      if (pgImg) pgImg.style.backgroundImage = '';
+      return bg;
+    });
+
+    function loadNearby(index) {
+      [-1, 0, 1, 2].forEach(offset => {
+        const i = (index + offset + TOTAL) % TOTAL;
+        const pgImg = slides[i] && slides[i].querySelector('.pg-img');
+        if (pgImg && !pgImg.style.backgroundImage && bgImages[i]) {
+          pgImg.style.backgroundImage = bgImages[i];
+        }
+      });
+    }
+
     function updateSlider() {
       const w = slides[0] ? slides[0].offsetWidth : 0;
       track.style.transform = `translateX(-${slideIndex * w}px)`;
       progressBar.style.width = ((slideIndex / (TOTAL - 1)) * 100) + '%';
       curLabel.textContent = String(slideIndex + 1).padStart(2, '0');
+      loadNearby(slideIndex);
     }
 
     btnNext.addEventListener('click', () => { slideIndex = (slideIndex + 1) % TOTAL; updateSlider(); });
