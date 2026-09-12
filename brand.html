@@ -735,7 +735,7 @@
       <span>© 2026 Mgr. Martina Benáčková · Brand fotografie</span>
       <span>Jihlava · Praha · Brno · Vysočina</span>
     
-      <div class="footer-legal"><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a> · <a href="ochrana-osobnich-udaju.html#cookies">Cookies</a></div>
+      <div class="footer-legal"><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a> · <a href="#" id="cookieSettingsLink">Nastavení cookies</a></div>
     </div>
   </footer>
 
@@ -848,6 +848,13 @@
         localStorage.setItem('cookieConsent', 'necessary');
         banner.classList.remove('show');
       });
+      var settingsLink = document.getElementById('cookieSettingsLink');
+      if (settingsLink) {
+        settingsLink.addEventListener('click', function(e){
+          e.preventDefault();
+          banner.classList.add('show');
+        });
+      }
     })();
   </script>
 </body>

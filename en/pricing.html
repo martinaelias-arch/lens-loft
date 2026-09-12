@@ -409,7 +409,7 @@
       <span>© 2026 Mgr. Martina Benáčková · Pricing</span>
       <span>Jihlava · Prague · Brno · Vysočina</span>
     
-      <div class="footer-legal"><a href="privacy-policy.html">Privacy Policy</a> · <a href="privacy-policy.html#cookies">Cookies</a></div>
+      <div class="footer-legal"><a href="privacy-policy.html">Privacy Policy</a> · <a href="#" id="cookieSettingsLink">Cookie Settings</a></div>
     </div>
   </footer>
 
@@ -472,6 +472,13 @@
         localStorage.setItem('cookieConsent', 'necessary');
         banner.classList.remove('show');
       });
+      var settingsLink = document.getElementById('cookieSettingsLink');
+      if (settingsLink) {
+        settingsLink.addEventListener('click', function(e){
+          e.preventDefault();
+          banner.classList.add('show');
+        });
+      }
     })();
   </script>
 </body>
