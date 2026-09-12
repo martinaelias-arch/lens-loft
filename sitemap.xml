@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.lightandloft.cz/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.lightandloft.cz/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lightandloft.cz/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.lightandloft.cz/en/index.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.lightandloft.cz/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lightandloft.cz/en/index.html" />
+  </url>
+
+  <url>
+    <loc>https://www.lightandloft.cz/brand.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.lightandloft.cz/brand.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lightandloft.cz/en/brand.html" />
+  </url>
+  <url>
+    <loc>https://www.lightandloft.cz/en/brand.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.lightandloft.cz/brand.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lightandloft.cz/en/brand.html" />
+  </url>
+
+  <url>
+    <loc>https://www.lightandloft.cz/interiery.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.lightandloft.cz/interiery.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lightandloft.cz/en/interiors.html" />
+  </url>
+  <url>
+    <loc>https://www.lightandloft.cz/en/interiors.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.lightandloft.cz/interiery.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lightandloft.cz/en/interiors.html" />
+  </url>
+
+  <url>
+    <loc>https://www.lightandloft.cz/eventy.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.lightandloft.cz/eventy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lightandloft.cz/en/events.html" />
+  </url>
+  <url>
+    <loc>https://www.lightandloft.cz/en/events.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.lightandloft.cz/eventy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lightandloft.cz/en/events.html" />
+  </url>
+
+  <url>
+    <loc>https://www.lightandloft.cz/svatby.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.lightandloft.cz/svatby.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lightandloft.cz/en/weddings.html" />
+  </url>
+  <url>
+    <loc>https://www.lightandloft.cz/en/weddings.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.lightandloft.cz/svatby.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lightandloft.cz/en/weddings.html" />
+  </url>
+
+  <url>
+    <loc>https://www.lightandloft.cz/rodina.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.lightandloft.cz/rodina.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lightandloft.cz/en/family.html" />
+  </url>
+  <url>
+    <loc>https://www.lightandloft.cz/en/family.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.lightandloft.cz/rodina.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lightandloft.cz/en/family.html" />
+  </url>
+
+  <url>
+    <loc>https://www.lightandloft.cz/cenik.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.lightandloft.cz/cenik.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lightandloft.cz/en/pricing.html" />
+  </url>
+  <url>
+    <loc>https://www.lightandloft.cz/en/pricing.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.lightandloft.cz/cenik.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lightandloft.cz/en/pricing.html" />
+  </url>
+
+  <url>
+    <loc>https://www.lightandloft.cz/o-mne.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.lightandloft.cz/o-mne.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lightandloft.cz/en/about.html" />
+  </url>
+  <url>
+    <loc>https://www.lightandloft.cz/en/about.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.lightandloft.cz/o-mne.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lightandloft.cz/en/about.html" />
+  </url>
+
+  <url>
+    <loc>https://www.lightandloft.cz/kontakt.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.lightandloft.cz/kontakt.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lightandloft.cz/en/contact.html" />
+  </url>
+  <url>
+    <loc>https://www.lightandloft.cz/en/contact.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.lightandloft.cz/kontakt.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lightandloft.cz/en/contact.html" />
+  </url>
+</urlset>
