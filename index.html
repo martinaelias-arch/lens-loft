@@ -287,7 +287,7 @@
     .cat-link { font-family:'Inter',sans-serif; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); text-decoration:none; display:inline-flex; align-items:center; gap:8px; margin-top:20px; transition:gap 0.2s; }
     .cat-link::after { content:'→'; }
     .cat-link:hover { gap:14px; }
-    .cat-img { position:relative; overflow:hidden; background:var(--bg3); }
+    .cat-img { position:relative; overflow:hidden; background:var(--bg3); display:block; }
     .cat-img-bg { position:absolute; inset:0; background:center/cover no-repeat; transition:transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94); }
     .category-row:hover .cat-img-bg { transform:scale(1.04); }
     @media (max-width:960px) {
@@ -401,8 +401,8 @@
       <div class="hero-content">
         <h1>Mgr. Martina Benáčková</h1>
         <p class="hero-headline">Fotím lidi, značky,<br>místa a chvíle,<br>na které nechcete<br>zapomenout.</p>
-        <p class="hero-cats">Brand fotografie · Interiéry · Eventy · Svatby · Rodiny</p>
-        <p class="hero-sub">Fotím přirozeně, s citem pro světlo, prostor a detail. Bez zbytečného pózování a bez fotek, na kterých se sami nepoznáváte.</p>
+        <p class="hero-cats">Brand · Interiéry · Eventy · Svatby · Rodiny</p>
+        <p class="hero-sub">Fotím přirozeně, s citem pro světlo, prostor a detail.</p>
         <p class="hero-loc">Jihlava · Vysočina · Praha · Brno · celá ČR dle domluvy</p>
         <a href="#co-fotim" class="btn">Prohlédnout nabídku</a>
       </div>
@@ -441,7 +441,7 @@
           <p>Jestli podnikáte, potřebujete víc než jednu hezkou profilovku. Společně vytvoříme fotky, které využijete na webu, Instagramu, v newsletteru, prezentacích i dalších materiálech. A hlavně takové, které budou opravdu vaše.</p>
           <a href="brand.html" class="cat-link">Brand fotografie</a>
         </div>
-        <div class="cat-img"><div class="cat-img-bg" style="background-image:url('brand-uvod.webp'), linear-gradient(135deg,#141418,#1c1c24);"></div></div>
+        <a href="brand.html" class="cat-img" aria-label="Brand fotografie"><div class="cat-img-bg" style="background-image:url('brand-uvod.webp'), linear-gradient(135deg,#141418,#1c1c24);background-position:center 15%;"</div></a>
       </div>
 
       <div class="category-row reverse">
@@ -452,7 +452,7 @@
           <p>Fotím interiéry pro designéry, architekty, ubytování, gastro, showroomy i další krásná místa. Celek, detaily, materiály, světlo i atmosféru. Tak, aby člověk dostal chuť ten prostor vidět naživo.</p>
           <a href="interiery.html" class="cat-link">Interiérová fotografie</a>
         </div>
-        <div class="cat-img"><div class="cat-img-bg" style="background-image:url('foceni interieru kuchyne.webp');"></div></div>
+        <a href="interiery.html" class="cat-img" aria-label="Interiérová fotografie"><div class="cat-img-bg" style="background-image:url('foceni interieru kuchyne.webp');"></div></a>
       </div>
 
       <div class="category-row">
@@ -463,7 +463,7 @@
           <p>Konference, firemní akce, večírky, workshopy, kulturní i společenské akce. Nejen pódium a společná fotka. Fotím lidi, atmosféru, detaily i všechno, co se děje mezi tím.</p>
           <a href="eventy.html" class="cat-link">Event fotografie</a>
         </div>
-        <div class="cat-img"><div class="cat-img-bg" style="background-image:url('eventy-uvod-v2.webp'), linear-gradient(135deg,#151a18,#1e2820);"></div></div>
+        <a href="eventy.html" class="cat-img" aria-label="Event fotografie"><div class="cat-img-bg" style="background-image:url('eventy-uvod-v2.webp'), linear-gradient(135deg,#151a18,#1e2820);"></div></a>
       </div>
 
       <div class="category-row reverse">
@@ -474,7 +474,7 @@
           <p>Nemusíte mít svatbu podle Pinterestu. Klidně malou. Velkou. Druhou. Úplně obyčejnou. Nebo úplně neobyčejnou. Důležité je, aby byla vaše. Já budu fotit vás, vaše lidi, emoce, smích, detaily a všechny ty momenty, které během dne utečou až moc rychle.</p>
           <a href="svatby.html" class="cat-link">Svatby</a>
         </div>
-        <div class="cat-img"><div class="cat-img-bg" style="background-image:url('svatby-uvod.webp'), linear-gradient(135deg,#1a1518,#221a20);background-position:center 20%;"></div></div>
+        <a href="svatby.html" class="cat-img" aria-label="Svatby"><div class="cat-img-bg" style="background-image:url('svatby-uvod.webp'), linear-gradient(135deg,#1a1518,#221a20);background-position:center 20%;"></div></a>
       </div>
 
       <div class="category-row">
@@ -485,7 +485,7 @@
           <p>Děti rostou rychle. A ne, nemusí při focení deset minut poslušně sedět a usmívat se. Můžeme fotit doma, venku, na výletě nebo někde, kde je vám dobře. Chci, abyste za pár let z fotek poznali nejen to, jak jste vypadali, ale jaké to tehdy bylo.</p>
           <a href="rodina.html" class="cat-link">Rodinné focení</a>
         </div>
-        <div class="cat-img"><div class="cat-img-bg" style="background-image:url('rodina-cover.webp'), linear-gradient(135deg,#151a1a,#1a2422);"></div></div>
+        <a href="rodina.html" class="cat-img" aria-label="Rodinné focení"><div class="cat-img-bg" style="background-image:url('rodina-cover.webp'), linear-gradient(135deg,#151a1a,#1a2422);"></div></a>
       </div>
     </section>
 

@@ -290,7 +290,7 @@
     .cat-link { font-family:'Inter',sans-serif; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); text-decoration:none; display:inline-flex; align-items:center; gap:8px; margin-top:20px; transition:gap 0.2s; }
     .cat-link::after { content:'→'; }
     .cat-link:hover { gap:14px; }
-    .cat-img { position:relative; overflow:hidden; background:var(--bg3); }
+    .cat-img { position:relative; overflow:hidden; background:var(--bg3); display:block; }
     .cat-img-bg { position:absolute; inset:0; background:center/cover no-repeat; transition:transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94); }
     .category-row:hover .cat-img-bg { transform:scale(1.04); }
     @media (max-width:960px) {
@@ -404,8 +404,8 @@
       <div class="hero-content">
         <h1>Mgr. Martina Benáčková</h1>
         <p class="hero-headline">I photograph people,<br>brands, places<br>and moments you<br>don't want to forget.</p>
-        <p class="hero-cats">Brand Photography · Interiors · Events · Weddings · Families</p>
-        <p class="hero-sub">I shoot naturally, with a feel for light, space and detail. No forced posing, no photos where you don't recognize yourself.</p>
+        <p class="hero-cats">Brand · Interiors · Events · Weddings · Families</p>
+        <p class="hero-sub">I shoot naturally, with a feel for light, space and detail.</p>
         <p class="hero-loc">Jihlava · Vysočina · Prague · Brno · anywhere in Czechia by arrangement</p>
         <a href="#co-fotim" class="btn">See what I offer</a>
       </div>
@@ -444,7 +444,7 @@
           <p>If you run a business, you need more than one nice profile picture. Together we'll create photos you can use on your website, Instagram, in your newsletter, presentations and other materials. And most importantly, ones that are truly yours.</p>
           <a href="brand.html" class="cat-link">Brand photography</a>
         </div>
-        <div class="cat-img"><div class="cat-img-bg" style="background-image:url('../brand-uvod.webp'), linear-gradient(135deg,#141418,#1c1c24);"></div></div>
+        <a href="brand.html" class="cat-img" aria-label="Brand photography"><div class="cat-img-bg" style="background-image:url('../brand-uvod.webp'), linear-gradient(135deg,#141418,#1c1c24);background-position:center 15%;"</div></a>
       </div>
 
       <div class="category-row reverse">
@@ -455,7 +455,7 @@
           <p>I photograph interiors for designers, architects, accommodation, gastro and showrooms, and other beautiful places. The whole space, the details, materials, light and atmosphere, so people want to see the space in person.</p>
           <a href="interiors.html" class="cat-link">Interior photography</a>
         </div>
-        <div class="cat-img"><div class="cat-img-bg" style="background-image:url('../foceni interieru kuchyne.webp');"></div></div>
+        <a href="interiors.html" class="cat-img" aria-label="Interior photography"><div class="cat-img-bg" style="background-image:url('../foceni interieru kuchyne.webp');"></div></a>
       </div>
 
       <div class="category-row">
@@ -466,7 +466,7 @@
           <p>Conferences, corporate events, parties, workshops, cultural and social gatherings. Not just the stage and a group photo. I photograph people, atmosphere, details, and everything happening in between.</p>
           <a href="events.html" class="cat-link">Event photography</a>
         </div>
-        <div class="cat-img"><div class="cat-img-bg" style="background-image:url('../eventy-uvod-v2.webp'), linear-gradient(135deg,#151a18,#1e2820);"></div></div>
+        <a href="events.html" class="cat-img" aria-label="Event photography"><div class="cat-img-bg" style="background-image:url('../eventy-uvod-v2.webp'), linear-gradient(135deg,#151a18,#1e2820);"></div></a>
       </div>
 
       <div class="category-row reverse">
@@ -477,7 +477,7 @@
           <p>Your wedding doesn't need to look like Pinterest. It can be small. Big. A second wedding. Completely ordinary. Or completely extraordinary. What matters is that it's yours. I'll photograph you, your people, the emotions, the laughter, the details, and all the moments that fly by far too quickly during the day.</p>
           <a href="weddings.html" class="cat-link">Weddings</a>
         </div>
-        <div class="cat-img"><div class="cat-img-bg" style="background-image:url('../svatby-uvod.webp'), linear-gradient(135deg,#1a1518,#221a20);background-position:center 20%;"></div></div>
+        <a href="weddings.html" class="cat-img" aria-label="Weddings"><div class="cat-img-bg" style="background-image:url('../svatby-uvod.webp'), linear-gradient(135deg,#1a1518,#221a20);background-position:center 20%;"></div></a>
       </div>
 
       <div class="category-row">
@@ -488,7 +488,7 @@
           <p>Kids grow up fast. And no, they don't need to sit still and smile obediently for ten minutes. We can shoot at home, outdoors, on a trip, or anywhere you feel comfortable. I want you to look back in a few years and recognize not just how you looked, but what it felt like.</p>
           <a href="family.html" class="cat-link">Family photography</a>
         </div>
-        <div class="cat-img"><div class="cat-img-bg" style="background-image:url('../rodina-cover.webp'), linear-gradient(135deg,#151a1a,#1a2422);"></div></div>
+        <a href="family.html" class="cat-img" aria-label="Family photography"><div class="cat-img-bg" style="background-image:url('../rodina-cover.webp'), linear-gradient(135deg,#151a1a,#1a2422);"></div></a>
       </div>
     </section>
 
